@@ -1,0 +1,62 @@
+
+<div class="col-8 d-flex align-items-center ">
+  <div class="input-group my-5">
+    <div class="input-group-prepend">
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="listFilter">
+
+        <option selected="selected" [value]="selectOption"></option>
+        <option value="">all</option>
+        <option value="50000">iphone</option>
+        <option value="2000">table</option>
+        <option value="12800">3D/tv</option>
+        <option value="12000">OPPO A50 S</option>
+        <option value="20890">Lenovo ThinkPad-20095</option>
+        <option value="20000">laptop IOS</option>
+        <!-- <option selected="selected" [value]="selectOption"></option>
+        <option value="">all</option>
+        <option value="iphone">iphone</option>
+        <option value="table">table</option>
+        <option value="3D/tv">3D/tv</option>
+        <option value="OPPO A50 S">OPPO A50 S</option>
+        <option value="Lenovo ThinkPad-20095">Lenovo ThinkPad-20095</option>
+        <option value="laptop IOS">laptop IOS</option> -->
+      </select>
+    </div>
+    <div class="mx-4">
+      <h4>Products Filter :</h4>
+    </div>
+    <input type="text" class="form-control" aria-label="Default"  [(ngModel)]="listFilter"aria-describedby="inputGroup-sizing-default">
+  </div>
+
+</div>
+
+<app-product-list [listFilter]="listFilter" (new)="fun($event)"></app-product-list>
+
+<caption>cart </caption>
+<table class="table table-dark">
+  <thead>
+    <tr  >
+      <th scope="col border ">name</th>
+      <th scope="col border">price</th>
+      <th scope="col border">quantity</th>
+      <th scope="col border">total</th>
+      <th scope="col border bg-light border">delete</th>
+    </tr>
+  </thead>
+  <tbody>
+<ng-container *ngFor="let item of cart">
+       <tr  class="bg-dark">
+      <td scope="row">{{item.name}}</td>
+      <td scope="row">{{item.price}}</td>
+      <td scope="row">{{item.quantity}}</td>
+      <td scope="row">{{item.quantity*item.price}}</td>
+      <td scope="row"><button class="btn btn-danger " (click)="delet(item.id)">remove</button></td>
+
+      <!-- <td scope="row">{{count*item.price}}</td> -->
+
+    </tr>
+</ng-container>
+
+  </tbody>
+</table>
+

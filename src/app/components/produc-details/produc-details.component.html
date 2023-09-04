@@ -1,0 +1,29 @@
+<section class="py-5 m-5">
+  <div class="col-md-5 mx-auto">
+    <div class="small fw-light"></div>
+    <div class="input-group">
+      <select class="form-select mx-2" aria-label="Default select example" [(ngModel)]="targetFilter">
+        <option selected="selected" [value]=""></option>
+        <option value="">all</option>
+        <option value="name">name</option>
+        <option value="quantity">quantity</option>
+        <option value="price">price</option>
+        <option value="categoryId">categoryId</option>
+        <option value="material">material</option>
+
+
+      </select>
+      <input type="text" class="form-control border-end-0 border rounded-pill w-50" id="example-search-input" [(ngModel)]="target">
+      <span class="input-group-append">
+        <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5 mx-2" type="button"
+        (click)="AllFilterInOne(targetFilter,target)"
+        >
+        <i class="fas fa-search"></i></button>
+
+      </span>
+    </div>
+  </div>
+
+</section>
+c
+<!-- Footer -->

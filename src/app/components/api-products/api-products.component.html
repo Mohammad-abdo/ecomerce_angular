@@ -1,0 +1,133 @@
+
+<div class="text-center d-flex align-items-center justify-content-center  text-lg-start mt-lg-5 pt-lg-5 ">
+    <h1 class="text-danger fw-bold fs-0 mx-auto">Register Now</h1>
+  </div>
+
+<div
+  class="containrt d-flex flex-column flex-lg-row justify-content-evenly m-2 pt-5 "
+>
+
+  <form
+    id="papa"
+    class=" w-100 bg-light"
+    (ngSubmit)="addUser()"
+    #userform="ngForm"
+  >
+  <div *ngIf="apiErrors.length > 0" class="alret alret-danger">
+
+    {{apiErrors}}
+
+</div>
+    <div class="bg-white shadow rounded p-3 input-group-lg">
+      <div class="col my-3">
+        <input
+          type="text"
+          class="form-control"
+          name="firstName"
+          placeholder="First Name"
+          [(ngModel)]="user.firstName"
+          required minlength="3"
+          #firstNameInput="ngModel" [ngClass]="{'is-invalid':(firstNameInput.touched ||firstNameInput.dirty )&& firstNameInput.invalid}"
+        />
+<span class="inavlid-feedback">
+  <span *ngIf="firstNameInput.errors?.['required']">Please Enter Your First Name</span>
+  <span *ngIf="firstNameInput.errors?.['minlength']">First Name Must Be at Latest 3 Characters</span>
+</span>      </div>
+
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          name="lastName"
+          placeholder="Last Name (required)"
+          [(ngModel)]="user.lastName"
+          required minlength="3"
+          maxlength="25"
+          #lastNameInput="ngModel" [ngClass]="{'is-invalid':(lastNameInput.touched ||lastNameInput.dirty) && lastNameInput.invalid}"
+        />
+        <span class="inavlid-feedback">
+          <span *ngIf="lastNameInput.errors?.['required']">Please Enter Your Last Name</span>
+          <span *ngIf="lastNameInput.errors?.['minlength']" class="text-danger">Last Name Must Be at Latest 3 Characters</span>
+          <span *ngIf="lastNameInput.errors?.['maxlength']"class="text-danger">Last Name Must Be at  25 Characters</span>
+        </span>
+      </div>
+      <div class="col">
+        <input
+          type="email"
+          class="form-control my-3"
+          name="email"
+          placeholder="Email Address "
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          [ngClass]="{'is-invalid':(email.touched ||email.dirty) && email.invalid}"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control my-3"
+          name="address"
+          placeholder=" Address "
+          [(ngModel)]="user.address"
+          #address="ngModel"
+          [ngClass]="{'is-invalid':(address.touched ||address.dirty) && address.invalid}"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="date"
+          class="form-control my-3"
+          name="birthDate"
+          placeholder="BirthDate "
+          [(ngModel)]="user.birthDate"
+          #birthDate="ngModel"
+          [ngClass]="{'is-invalid':(birthDate.touched ||birthDate.dirty) && birthDate.invalid}"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="tel"
+          class="form-control my-3"
+          name="phoneNumber"
+          placeholder="phoneNumber "
+maxlength="11"
+          [(ngModel)]="user.phoneNumber"
+          #phoneNumber="ngModel"
+          [ngClass]="{'is-invalid':(phoneNumber.touched ||phoneNumber.dirty) && phoneNumber.invalid}"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="password"
+          class="form-control my-3"
+          placeholder="password"
+          name="password"
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          [ngClass]="{'is-invalid':(password.touched ||password.dirty) && password.invalid}"
+        />
+      </div>
+<div class=" mx-4 " style="display: flex !important ;flex-direction: row-reverse ">
+  <a
+  ><button class="btn btn-primary  my-3 px-4 shadow " style="font-size: 20px;" [disabled]="userform.invalid">
+<i class="fas fa-spinner fa-spin" *ngIf="isLoading"></i>
+<span *ngIf="!isLoading">sign up</span>
+
+  </button></a
+>
+
+</div>
+      <hr />
+
+    </div>
+
+    <div class="my-5 pb-5 text-center">
+      <p class="fw-bold">
+        <a href="#" class="text-decoration-none text-dark">Creat a Page</a>
+        <span class="fw-normal">for celebrity ,band or business</span>
+      </p>
+    </div>
+  </form>
+</div>
+
+

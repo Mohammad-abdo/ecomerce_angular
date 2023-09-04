@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Details Page</title>
+  </head>
+  <style>
+    .fa-bars {
+      font-size: large;
+    }
+    .fa-circle-user {
+      font-size: 25px;
+    }
+  </style>
+  <body>
+    <!-- header -->
+
+    <!-- end header -->
+    <!-- House Details -->
+    <div class="house-details">
+      <div class="house-title">
+        <h1>Wenge House</h1>
+        <div class="row review-div">
+          <div class="m-2">
+            <i class="fas fa-star">4.5</i>
+            <span>(245 Reviews)</span>
+          </div>
+
+          <div>. Location: San Francisco, California, United States</div>
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="gallery-img-1"><img src="images/house-1.png" /></div>
+        <div><img src="images/house-2.png" /></div>
+        <div><img src="images/house-3.png" /></div>
+        <div><img src="images/house-4.png" /></div>
+        <div><img src="images/house-5.png" /></div>
+      </div>
+      <div class="small-details">
+        <h2>Entire Rental Unit hosted by Brandon</h2>
+        <p>2 Guest &nbsp; &nbsp; 2 bed &nbsp; &nbsp; 1 Bathroom</p>
+        <h4>$ 100 / Day</h4>
+      </div>
+      <hr class="line" />
+      <div class="d-flex form-container">
+        <!-- details list -->
+        <ul class="details-list">
+          <li>
+            <i class="fas fa-home"></i>Entire Home
+            <span>You will have the entire flat for you.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-soap"></i>Enhanced Clean
+            <span>This host committed to Staybnb's cleaning process.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-map-pin"></i>Great Location
+            <span>90% of recent guests gave the location a 5-star rating.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-heart"></i>Great Check-in Experience
+            <span
+              >100% of recent guests gave the check-in process a 5-star
+              rating.</span
+            >
+          </li>
+        </ul>
+        <form
+          class="container mt-3 rounded form-checkin"
+          style="
+            max-width: 420px;
+            padding: 30p 30px 60px 30px;
+            background-color: white;
+            font-family: Helvetica;
+            font-weight: 600;
+            color: #484848;
+          "
+        >
+          <div
+            class="d-flex justify-content-between p-2"
+            style="font-size: 15px"
+          >
+            <div>
+              <span style="font-size: 1.2rem; font-weight: 600"> 100$ </span>
+              night
+            </div>
+            <div class="m-2">
+              <i class="fas fa-star">4.5</i>
+              <span>(245 Reviews)</span>
+            </div>
+          </div>
+          <div class="input-group-prepend" style="font-size: small">
+            <label>CHECK IN</label> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+            &emsp; &emsp; <label>CHECK OUT</label><br />
+          </div>
+          <div class="input-group" style="font-size: small">
+            <input
+              class="form-control"
+              type="date"
+              placeholder="dd-mm-yyyy"
+              name="checkin"
+            />
+            <input
+              class="form-control"
+              type="date"
+              placeholder="dd-mm-yyyy"
+              name="checkout"
+            />
+          </div>
+          <br />
+          <div class="form-group" style="font-size: small">
+            <label>GUESTS</label><br />
+            <select class="custom-select">
+              <option selected>1 guest</option>
+              <option value="Adults">Adults</option>
+              <option value="Children">Children</option>
+              <option value="Infants">Infant</option></select
+            ><br />
+          </div>
+          <div class="form-group">
+            <button type="submit">Reserve</button>
+          </div>
+        </form>
+      </div>
+      <hr class="line" />
+      <!-- home description -->
+      <p class="home-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dicta,
+        possimus accusamus similique laborum natus, voluptatum excepturi minus
+        molestiae molestias autem repellat itaque harum blanditiis obcaecati a
+        perspiciatis fugiat amet? Rerum iusto adipisci eum eaque sequi? Eum
+        aliquam voluptatum perferendis praesentium architecto delectus optio
+        numquam magni omnis nemo voluptatibus cumque inventore quasi commodi
+        nostrum adipisci, accusantium mollitia rem sint eligendi!
+      </p>
+      <hr class="line" />
+
+      <div class="map">
+        <h3>Location on Map</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.18159897975!2d-122.52000076743691!3d37.7576713152053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1690030840254!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <b>San Francisco, California, United States</b>
+        <p>"It's like a Home away from home."</p>
+      </div>
+      <hr class="line" />
+
+      <!-- host info -->
+      <div class="host">
+        <img src="images/host.png" />
+        <div>
+          <h2>Hosted by Brandon</h2>
+          <p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </span>
+            &nbsp; &nbsp; 245 Reviews &nbsp; &nbsp; Response rate 100% &nbsp;
+            &nbsp; Response time: 60min
+          </p>
+        </div>
+      </div>
+      <a href="#" class="contact-host">Contact Host</a>
+    </div>
+  </body>
+</html>

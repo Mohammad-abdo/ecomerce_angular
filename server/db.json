@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "3D/tv animation ",
+      "quantity": 5,
+      "price": 79080,
+      "categoryId": 1,
+      "material": "meat",
+      "prImageUrl": "https://m.media-amazon.com/images/I/61ckfbfWrfL._AC_SL1000_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Lenovo ThinkPad-20095",
+      "quantity": 2,
+      "price": 15890,
+      "categoryId": 1,
+      "material": "meat",
+      "prImageUrl": "https://m.media-amazon.com/images/I/51B06mTIrIL._AC_SL1000_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "laptop IOS",
+      "quantity": 0,
+      "price": 20000,
+      "categoryId": 1,
+      "material": "meat",
+      "prImageUrl": "https://m.media-amazon.com/images/I/61yTSCamQKL._AC_SL1500_.jpg"
+    },
+    {
+      "prImageUrl": "https://mazajyhome.com/cdn/shop/products/sqIMG_11_1.jpg?v=1660164843&width=1946",
+      "quantity": 2,
+      "price": 13456,
+      "categoryId": "1",
+      "prDetails": "dhfhjfjhgkm",
+      "name": "sal",
+      "id": 7
+    },
+    {
+      "name": "proxy glass",
+      "prImageUrl": "https://mazajyhome.com/cdn/shop/products/sqIMG_11_1.jpg?v=1660164843&width=1946",
+      "prDetails": "llorem iuieg ",
+      "categoryId": "2",
+      "price": 3070,
+      "quantity": 3,
+      "id": 8
+    },
+    {
+      "name": "OPPO A50 S",
+      "prDetails": "oihhh dhohv",
+      "categoryId": "3",
+      "price": 1000,
+      "quantity": 5,
+      "prImageUrl": "https://incredideals.co/cdn/shop/files/61elxy1AgFL._AC_SL1390.jpg?v=1683119947&width=800",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "ahmad",
+      "lastName": "sapery",
+      "email": "ahmedsa22@gmail.com",
+      "password": 123456
+    },
+    {
+      "firstName": "ABD",
+      "lastName": "MOHAME",
+      "email": "sdm800884@gmail.com",
+      "password": "2432432",
+      "id": 2
+    },
+    {
+      "phoneNumber": 116739061,
+      "address": "بهاليل الجزيره",
+      "firstName": "ABD",
+      "lastName": "MOHAME",
+      "email": "sdm800884@gmail.com",
+      "birthDate": "1996-02-09",
+      "password": "4564564564565",
+      "id": 3
+    },
+    {
+      "firstName": "MOHAME",
+      "lastName": "salah",
+      "email": "salahLiv22@gmail.com",
+      "address": "LiverPole city",
+      "birthDate": "0994-02-21",
+      "phoneNumber": 93566454646,
+      "password": "011209654854",
+      "id": 4
+    },
+    {
+      "firstName": "ABD",
+      "lastName": "MOHAME",
+      "email": "sdm800884@gmail.com",
+      "address": "بهاليل الجزيره",
+      "birthDate": "2023-08-26",
+      "phoneNumber": "01120916853",
+      "password": "Aghgh0111",
+      "id": 5
+    },
+    {
+      "firstName": "sara ",
+      "lastName": "abdl hamed",
+      "email": "sara@gmail.com",
+      "address": "elmansora",
+      "birthDate": "2012-03-26",
+      "phoneNumber": "01120916853",
+      "password": "sara011",
+      "id": 6
+    }
+  ]
+}

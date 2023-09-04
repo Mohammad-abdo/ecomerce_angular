@@ -1,0 +1,270 @@
+<div class="widget-content widget-content-area add-manage-product-2">
+  <div class="row">
+      <div class="col-xl-7 col-md-12">
+          <div class="card card-default">
+              <div class="card-heading"><h2 class="card-title"><span>GENERAL</span></h2></div>
+              <div class="card-body">
+                  <div class="card-body">
+<!-- Start Form  -->
+
+
+                      <form class="form-horizontal"  (ngSubmit)="addProduct()"
+                      #userform="ngForm">
+                      <!-- name  -->
+                          <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">Name :</label>
+                                  <div class="col-md-8">
+                                      <input class="form-control" name="name" type="text"
+                                      [(ngModel)]="product.name"
+                                      required
+                                      #Name="ngModel" [ngClass]="{'is-invalid':(Name.touched ||Name.dirty )&& Name.invalid}"
+                                      >
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- description  -->
+                          <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">Description :</label>
+                                  <div class="col-md-8">
+                                      <textarea rows="4" cols="5" name="description" class="form-control"
+                                      [(ngModel)]="product.prDetails"
+                                      #prDetails="ngModel" [ngClass]="{'is-invalid':(prDetails.touched ||prDetails.dirty )&& prDetails.invalid}"></textarea>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Category -->
+                          <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">Category :</label>
+                                  <div class="col-md-8">
+                                    <input class="form-control" name="name" type="text"
+                                    [(ngModel)]="product.categoryId"
+                                    required
+                                    #categoryId="ngModel" [ngClass]="{'is-invalid':(categoryId.touched ||categoryId.dirty )&& categoryId.invalid}"
+                                    >
+
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Brand -->
+                          <!-- <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">Brand :</label>
+                                  <div class="col-md-8">
+                                      <select class="form-control form-custom" name="brand"
+                                      [(ngModel)]="product.prand"
+                                      required
+                                      #prand="ngModel" [ngClass]="{'is-invalid':(prand.touched ||prand.dirty )&& prand.invalid}"
+                                      >
+                                          <option [value]="prand">Select a Brand</option>
+                                          <option value="brand1">Microsoft</option>
+                                          <option value="brand2">Samsung</option>
+                                          <option value="brand3">HP</option>
+                                          <option value="brand4">Ford</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div> -->
+                          <!-- color -->
+                          <!-- <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">Color :</label>
+                                  <div class="col-md-8">
+                                      <select class="form-control form-custom" name="color"
+                                      [(ngModel)]="product.color"
+                                      required
+                                      #color="ngModel" [ngClass]="{'is-invalid':(color.touched ||color.dirty )&& color.invalid}"
+                                      >
+                                          <option value="">Select a Color</option>
+                                          <option value="color1">Black</option>
+                                          <option value="color2">White</option>
+                                          <option value="color3">Blue</option>
+                                          <option value="color4">Red</option>
+                                          <option value="color5">Green</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div> -->
+                          <!-- status -->
+                          <!-- <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">Status :</label>
+                                  <div class="col-md-8">
+                                      <select class="form-control form-custom" name="status"
+                                      [(ngModel)]="product.status"
+                                      required
+                                      #status="ngModel" [ngClass]="{'is-invalid':(status.touched ||status.dirty )&& status.invalid}"
+                                      >
+                                          <option value="">Please Select</option>
+                                          <option value="status1">In Stock</option>
+                                          <option value="status2">Out of Stock</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div> -->
+                          <!-- price  -->
+                          <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">price :</label>
+                                  <div class="col-md-8">
+                               <input type="number" name="quantity" id=""
+                               [(ngModel)]="product.price"
+                               required
+                               #price="ngModel" [ngClass]="{'is-invalid':(price.touched ||price.dirty )&& price.invalid}"
+                               >
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- quantity  -->
+                          <div class="form-group mb-4">
+                              <div class="row">
+                                  <label class="col-md-4">quantity :</label>
+                                  <div class="col-md-8">
+                               <input type="number" name="quantity" id=""
+                               [(ngModel)]="product.quantity"
+                               required
+                               #quantity="ngModel" [ngClass]="{'is-invalid':(quantity.touched ||quantity.dirty )&& quantity.invalid}"
+                               >
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- img  -->
+                          <div class="form-group">
+                            <div class="row">
+                                <label class="col-md-4">Image Url :</label>
+                                <div class="col-md-8">
+                                    <div class="mb-3">
+                                        <div class="custom-file">
+
+                                            <input class="form-control" name="name" type="text"
+                                            [(ngModel)]="product.prImageUrl"
+                                            required
+                                            #prImageUrl="ngModel" [ngClass]="{'is-invalid':(prImageUrl.touched ||prImageUrl.dirty )&& prImageUrl.invalid}"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <div class=" mx-4 " style="display: flex !important ;flex-direction: row-reverse ">
+                            <a
+                            ><button class="btn btn-primary  my-3 px-4 shadow " style="font-size: 20px;" [disabled]="userform.invalid">
+                        Add Product
+
+                            </button></a
+                          >
+
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- <div class="col-xl-5 col-md-12">
+          <div class="card card-default">
+              <div class="card-heading"><h2 class="card-title"><span>PRICING</span></h2></div>
+              <div class="card-body">
+                  <form class="form-horizontal">
+                      <div class="form-group mb-4">
+                          <div class="row">
+                              <label class="col-md-4">Price :</label>
+                              <div class="col-md-8">
+                                  <input class="form-control" name="price" type="text">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group mb-4">
+                          <div class="row">
+                              <label class="col-md-4">Tax Class :</label>
+                              <div class="col-md-8">
+                                  <select class="form-control form-custom" name="tax_class">
+                                      <option value="">Please Select</option>
+                                      <option value="tax1">None</option>
+                                      <option value="tax2">Shipping</option>
+                                      <option value="tax3">Taxable Goods</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group mb-4">
+                          <div class="row">
+                              <label class="col-md-4">Discount :</label>
+                              <div class="col-md-8">
+                                  <input class="form-control" name="discount" type="text">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group mb-4">
+                          <div class="row">
+                              <label class="col-md-4">Coupon :</label>
+                              <div class="col-md-8">
+                                  <input class="form-control" name="coupon" type="text">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group mb-4">
+                          <div class="row">
+                              <label class="col-md-4"></label>
+                              <div class="col-md-8">
+                                  <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                    <label class="custom-control-label" for="customCheck4">Check to Apply</label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <label class="col-md-12"><span>Image</span></label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <label class="col-md-4">Image :</label>
+                              <div class="col-md-8">
+                                  <div class="mb-3">
+                                      <div class="custom-file">
+                                          <input type="file" class="form-control-file" id="file-input">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <label class="col-md-12"><span>INVENTORY</span></label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <label class="col-md-4">QTY :</label>
+                              <div class="col-md-8">
+                                  <input class="form-control" name="qty" type="text">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <label class="col-md-12"><span>KEYWORDS</span></label>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <label class="col-md-4">Keywords :</label>
+                              <div class="col-md-8">
+                                  <input class="form-control" name="keywords" type="text">
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <div class="align-center">
+              <input value="Insert Product" class="btn" type="submit">
+          </div>
+      </div> -->
+  </div>
+</div>

@@ -1,0 +1,297 @@
+// // CSS (Fonts required: Noto Sans.)
+// .demo{ font-family: 'Noto Sans', sans-serif; }
+// .panel{
+//   background: linear-gradient(to right, #2980b9, #2c3e50);
+//   padding: 0;
+//   border-radius: 10px;
+//   border: none;
+//   box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+// }
+// .panel .panel-heading{
+//   padding: 20px 15px;
+//   border-radius: 10px 10px 0 0;
+//   margin: 0;
+// }
+// .panel .panel-heading .title{
+//   color: #fff;
+//   font-size: 28px;
+//   font-weight: 500;
+//   text-transform: capitalize;
+//   line-height: 40px;
+//   margin: 0;
+// }
+// .panel .panel-heading .btn{
+//   color: rgba(255,255,255,0.5);
+//   background: transparent;
+//   font-size: 16px;
+//   text-transform: capitalize;
+//   border: 2px solid #fff;
+//   border-radius: 50px;
+//   transition: all 0.3s ease 0s;
+// }
+// .panel .panel-heading .btn:hover{
+//   color: #fff;
+//   text-shadow: 3px 3px rgba(255,255,255,0.2);
+// }
+// .panel .panel-heading .form-control{
+//   color: #fff;
+//   background-color: transparent;
+//   width: 35%;
+//   height: 40px;
+//   border: 2px solid #fff;
+//   border-radius: 20px;
+//   display: inline-block;
+//   transition: all 0.3s ease 0s;
+// }
+// .panel .panel-heading .form-control:focus{
+//   background-color: rgba(255,255,255,0.2);
+//   box-shadow: none;
+//   outline: none;
+// }
+// .panel .panel-heading .form-control::placeholder{
+//   color: rgba(255,255,255,0.5);
+//   font-size: 15px;
+//   font-weight: 500;
+// }
+// .panel .panel-body{ padding: 0; }
+// .panel .panel-body .table thead tr th{
+//   color: #fff;
+//   background-color: rgba(255, 255, 255, 0.2);
+//   font-size: 16px;
+//   font-weight: 500;
+//   text-transform: uppercase;
+//   padding: 12px;
+//   border: none;
+// }
+// .panel .panel-body .table tbody tr td{
+//   color: #fff;
+//   font-size: 15px;
+//   padding: 10px 12px;
+//   vertical-align: middle;
+//   border: none;
+// }
+// .panel .panel-body .table tbody tr:nth-child(even){ background-color: rgba(255,255,255,0.05); }
+// .panel .panel-body .table tbody .action-list{
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+// }
+// .panel .panel-body .table tbody .action-list li{
+//   display: inline-block;
+//   margin: 0 5px;
+// }
+// .panel .panel-body .table tbody .action-list li a{
+//   color: #fff;
+//   font-size: 15px;
+//   position: relative;
+//   z-index: 1;
+//   transition: all 0.3s ease 0s;
+// }
+// .panel .panel-body .table tbody .action-list li a:hover{ text-shadow: 3px 3px 0 rgba(255,255,255,0.3); }
+// .panel .panel-body .table tbody .action-list li a:before,
+// .panel .panel-body .table tbody .action-list li a:after{
+//   content: attr(data-tip);
+//   color: #fff;
+//   background-color: #111;
+//   font-size: 12px;
+//   padding: 5px 7px;
+//   border-radius: 4px;
+//   text-transform: capitalize;
+//   display: none;
+//   transform: translateX(-50%);
+//   position: absolute;
+//   left: 50%;
+//   top: -32px;
+//   transition: all 0.3s ease 0s;
+// }
+// .panel .panel-body .table tbody .action-list li a:after{
+//   content: '';
+//   height: 15px;
+//   width: 15px;
+//   padding: 0;
+//   border-radius: 0;
+//   transform: translateX(-50%) rotate(45deg);
+//   top: -18px;
+//   z-index: -1;
+// }
+// .panel .panel-body .table tbody .action-list li a:hover:before,
+// .panel .panel-body .table tbody .action-list li a:hover:after{
+//   display: block;
+// }
+// .panel .panel-footer{
+//   color: #fff;
+//   background-color: transparent;
+//   padding: 15px;
+//   border: none;
+// }
+// .panel .panel-footer .col{ line-height: 35px; }
+// .pagination{ margin: 0; }
+// .pagination li a{
+//   color: #fff;
+//   background-color: transparent;
+//   border: 2px solid transparent;
+//   font-size: 18px;
+//   font-weight: 500;
+//   text-align: center;
+//   line-height: 31px;
+//   width: 35px;
+//   height: 35px;
+//   padding: 0;
+//   margin: 0 3px;
+//   border-radius: 50px;
+//   transition: all 0.3s ease 0s;
+// }
+// .pagination li a:hover{
+//   color: #fff;
+//   background-color: transparent;
+//   border-color: rgba(255,255,255,0.2);
+// }
+// .pagination li a:focus,
+// .pagination li.active a,
+// .pagination li.active a:hover{
+//   color: #fff;
+//   background-color: transparent;
+//   border-color: #fff;
+// }
+// .pagination li:first-child a,
+// .pagination li:last-child a{
+//   border-radius: 50%;
+// }
+// @media only screen and (max-width:767px){
+//   .panel .panel-heading .title{
+//       text-align: center;
+//       margin: 0 0 10px;
+//   }
+//   .panel .panel-heading .btn_group{ text-align: center; }
+// }
+// // License Terms
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif
+}
+
+
+
+.pic {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.table thead {
+    background-color: #21cf95;
+}
+
+.table thead th {
+    padding: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+.table tbody td input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container .table-wrap {
+
+    margin: 20px auto;
+    overflow-x: auto
+}
+
+.container .table-wrap::-webkit-scrollbar {
+    height: 5px;
+}
+
+.container .table-wrap::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #5D7ECD, #0C91E6);
+}
+
+.table>:not(caption)>*>* {
+    padding: 2rem 0.5rem;
+}
+
+.input {
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-weight: 600;
+    outline: none;
+    padding: 8px;
+}
+
+::placeholder {
+    color: black;
+    font-weight: 600;
+}
+
+.table tbody td input[type="checkbox"]:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f00c";
+    color: #fff;
+    font-size: 15px;
+    display: none
+}
+
+.table tbody td input[type="checkbox"]:checked,
+.table tbody td input[type="checkbox"]:checked:hover {
+    background-color: #21cf95;
+}
+
+.table tbody td input[type="checkbox"]:checked::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table tbody td input[type="checkbox"]:hover {
+    background-color: #ddd;
+}
+
+.table tbody td {
+    padding: 30px;
+    margin: 0;
+    font-size: 14.5px;
+    font-weight: 600;
+}
+
+.table tbody td .fa-times {
+    color: #D32F2F;
+}
+
+
+.text-muted {
+    font-size: 12.5px;
+}
+
+.table tbody tr td:nth-of-type(3) {
+    min-width: 320px;
+}
+
+@media(min-width: 992px) {
+    .container .table-wrap {
+        overflow: hidden;
+    }
+}
+div#example_Modal{
+  width: 80em !important;
+
+position: absolute !important;
+top: 6%;
+left: 50%;
+}
+

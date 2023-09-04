@@ -1,0 +1,94 @@
+<!-- <router-outlet></router-outlet> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div class="container m-4">
+  <div class="row">
+    <div class="col-3 d-flex align-items-center">
+    </div>
+    <!-- <div class="col-8 d-flex align-items-center">
+      <div class="input-group ">
+        <div class="input-group-prepend">
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="listFilter">
+
+            <option selected="selected" [value]="selectOption"></option>
+            <option value="">all</option>
+            <option value="iphone">iphone</option>
+            <option value="table">table</option>
+            <option value="3D/tv">3D/tv</option>
+            <option value="OPPO A50 S">OPPO A50 S</option>
+            <option value="Lenovo ThinkPad-20095">Lenovo ThinkPad-20095</option>
+            <option value="laptop IOS">laptop IOS</option>
+          </select>
+        </div>
+        <div class="mx-4">
+          <h4>Products Filter :</h4>
+        </div>
+        <input type="text" class="form-control" aria-label="Default"[value]="selectOption" [(ngModel)]="listFilter"aria-describedby="inputGroup-sizing-default">
+      </div>
+
+    </div> -->
+
+  </div>
+     </div>
+<div class="container-fluid">
+  <div class="row">
+    <app-sidebar class="col-lg-2 col-md-2 col-sm-0" ></app-sidebar>
+    <div class="container col-lg-10 col-md-10 col-sm-12">
+      <!-- <input type="number" placeholder="Min Price" #minPrice (input)="filterByPrice($event.target.value, maxPrice.value)" > -->
+     <!-- <input type="number" placeholder="Max Price" #maxPrice (input)="filterByPrice(minPrice.value, $event.target.value)"> -->
+    <!-- <input type="text" class="form-control" aria-label="Default"  [(ngModel)]="listFilter"aria-describedby="inputGroup-sizing-default"> -->
+
+     <ng-template #template></ng-template>
+      <div class="row">
+        <ng-container *ngFor="let item of filterProducts;let i=index" >
+          <div class=" col-lg-3 col-md-4 col-sm-6  mb-5 " (click)='getproduct(item.id)'   appShadow [ngClass]="{'bg-danger':item.price<10000}">
+            <div  class="card bg-light" >
+              <!-- <img [src]="item.prImageUrl" (click)="prDetails(item.id)" class="card-img-top img-fluid" *ngIf="showImg" alt="..." appImagStyle/> -->
+              <img [src]="item.prImageUrl" [routerLink]="['/product',item.id]" class="card-img-top img-fluid" *ngIf="showImg" alt="..." appImagStyle/>
+
+
+              <div class="card-body">
+                <h5 class="card-title">{{item.name|uppercase}}</h5>
+                <p class="card-text" [ngClass]="{'text-danger':item.price<10000}">
+               price: {{item.price|currency:' EGP '}}
+                </p>
+                <span>{{item.quantity}}</span>
+                <!-- switch ng -->
+    <div>
+      <ng-container [ngSwitch]="item.quantity">
+        <ng-container *ngSwitchCase="0">quantity; <span>{{item.quantity}}</span></ng-container>
+        <ng-container *ngSwitchCase="1">quantity; <span>{{item.quantity}}</span></ng-container>
+        <ng-container *ngSwitchCase="2">quantity; <span>{{item.quantity}}</span></ng-container>
+        <ng-container *ngSwitchCase="3">quantity; <span>{{item.quantity}}</span></ng-container>
+        <ng-container *ngSwitchCase="4">quantity; <span>{{item.quantity}}</span></ng-container>
+        <ng-container *ngSwitchCase="5">quantity; <span>{{item.quantity}}</span></ng-container>
+      </ng-container>
+    </div>
+    <div>
+      <ng-container *ngIf="item.quantity>0;else outOfStock">in stock</ng-container>
+      <ng-template #outOfStock>Out Of Stock</ng-template>
+    </div>
+              </div>
+           <div class="d-flex align-items-center justify-content-between">
+            <!-- <button class="btn btn-primary m-2 w-50" [disabled]="item.quantity==0" (click)=" funCart(item)" >Buy</button> -->
+            <button class="btn btn-primary m-2 w-50" [disabled]="item.quantity==0"  (click)="funCart(item)">Buy</button>
+            <span class="mx-2">{{date|date:'shortDate'}}</span>
+           </div>
+            </div>
+          </div>
+        </ng-container>
+
+      </div>
+     </div>
+  </div>
+</div>
+
+  </body>
+</html>

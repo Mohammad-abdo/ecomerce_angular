@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container my-3">
+
+
+<div class="row bg-light rounded ">
+  <div class="">
+    <div class="input-group d-flex align-items-center justify-content-between">
+    <label for="Cridt-card" class="m-1">Enter Cridt Num :</label>
+      <input type="text" class="form-control m-1" aria-label="Default" id="Cridt-card"[(ngModel)]="inputValue"[value]="inputValue|calcdiscount" aria-describedby="inputGroup-sizing-default" pattern="/\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}/">
+    </div>
+    <div class="m-4">
+      <div class="d-flex align-items-center justify-content-center">
+        <h4>Yor cridt num is</h4>
+      </div>
+<input type="text"[value]="inputValue|calcdiscount" class="form-control m-1" aria-label="Default" id="Cridt-card" aria-describedby="inputGroup-sizing-default">
+
+    </div>
+   </div>
+       <div class="input-group ">
+        <div class="input-group-prepend">
+          <div>
+            <h4>Products Filter :</h4>
+          </div>
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="listFilter">
+
+            <option selected="selected" [value]="filter2"></option>
+            <option value="">all</option>
+            <option value="iphone">iphone</option>
+            <option value="table">table</option>
+            <option value="3D/tv">3D/tv</option>
+            <option value="OPPO A50 S">OPPO A50 S</option>
+            <option value="Lenovo ThinkPad-20095">Lenovo ThinkPad-20095</option>
+            <option value="laptop IOS">laptop IOS</option>
+          </select>
+        </div>
+        <!-- <input type="text" class="form-control" aria-label="Default"[value]="filter2"aria-describedby="inputGroup-sizing-default"> -->
+      </div>
+</div>
+   </div>
+  </body>
+</html>
+
